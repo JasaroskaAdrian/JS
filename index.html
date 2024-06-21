@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrians Website</title>
+</head>
+<body>
+    <script>
+        let jsonString = '{"Numbers": [{"One": 1}, {"Two": 2}, {"Three": 3}]}';
+        const jsonData = JSON.parse(jsonString);
+
+        function Output(num1, num2, num3) {
+            // Extrahieren der Werte aus den JSON-Objekt
+            this.num1 = jsonData.Numbers[0].One;
+            this.num2 = jsonData.Numbers[1].Two;
+            this.num3 = jsonData.Numbers[2].Three;
+
+            // Summieren der Werten
+            const sum = this.num1 + this.num2 + this.num3;
+
+            // Ausgabe der Summe
+            document.write(sum);
+
+        }
+        // Funktion aufrufen, um die Summe anzuzeigen
+        Output();
+    </script>
+    <input type="checkbox">
+</body>
+</html>
